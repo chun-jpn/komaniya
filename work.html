@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>復習用</title>
+</head>
+<body>
+<p>元のタイトル</p>
+<div class="re">
+    <input type="submit" value="更新" onclick="load()">
+</div>
+<input type="submit" value="警告" class="aleart" onclick="danger()">
+    <script> //復習　オブジェクト
+        //現在、開いているページを指定
+        const URL = location.href ; 
+        console.log(URL)
+        //onclickでボタンを押したらload()を実行する
+        function load(){
+            location.reload() //ページの更新を実行
+        }
+
+        function danger(){
+            alert('警告！')
+        }
+        
+        const title = document.title
+        const titleEject = document.createElement('p')
+        titleEject.textContent = title
+        const sarch = document.querySelector('.aleart')
+        sarch.after(titleEject)
+
+        const element1 = document.createElement('p')
+        element1.textContent = '復習'
+        const chenge = document.querySelector('.re')
+        chenge.after(element1)
+        element1.classList.add('review')
+
+
+
+</script>
+
+</body>
+</html>
