@@ -12,7 +12,7 @@ img{
     max-width: 100% ;
 }
 body{
-  margin: 0 0 0 0 ;
+    margin: 0 0 0 0 ;
 }
 
 
@@ -41,7 +41,7 @@ body{
     color: #ffffff ;
 }
 
-/*home.htmlのヒーローに適用*/
+/*index.htmlのヒーローに適用*/
 @keyframes fadeIn {
     0% {
       opacity: 0;
@@ -50,7 +50,7 @@ body{
       opacity: 1;
     }
   }
-.hero.home{
+.hero.index{
     background-image: url(../img/komaniya_hero.webp) ;
     background-size: cover ;
     position: relative ;
@@ -71,18 +71,32 @@ main h2 {
 }
 
 /*フッターに適用*/
-.top{
+.returnTop{
+    position : fixed;
+    bottom: 20px;
+    left: 0;
+    right: 0;
     text-align: center ;
+    display: none;
+    margin: 0 auto;
+
 }
+
+
   .copyright{
     margin-top: 20px ;
     margin-bottom: 0px ;
     padding-top: 75px ;
     padding-bottom: 75px ;
-    background-color: #582540 ;
-    color: #ffffff ;
+    background-image: url(../img/kissyo.jpg) ;
+    background-repeat: repeat;
+    color: #000000 ;
     text-align: center ;
+    font-size: 25px;
+    letter-spacing: 10px;
 }
+
+
 
 /*　モバイル対応　*/
 @media(max-width: 767px ){
@@ -98,9 +112,21 @@ main h2 {
 /* 個別スタイル */
 /* index.html */
 
-.log{
+.index main{
     padding: 0 0 0 20px;
     line-height: 1.7;
 }
 
 /* overview.html */
+.view{
+    border-collapse: collapse ;
+}
+.view th, .view td{
+    border: 1px solid #dbdbdb;
+    padding: 10px;
+}
+.view th{
+    width: 112px ;
+    text-align: left ;
+    vertical-align: top ;
+}
