@@ -3,88 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>てすと</title>
+    <title>狛荷屋</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-
-    <header id="top">
-        <h1>きららの尻尾はそれぞれ星４相当である</h1>
-
+<body id="top">
+    <!--ヘッダーここから-->
+    <header class="header">
+        <h1>狛荷屋へようこそ！　にゃ～ん♪</h1>
+        <nav class="nav">
             <ul>
-                <li><h2>きららの左側の尻尾について</h2></li>
-                    <ol>
-                        <li>きららの左側の尻尾の先の動きについて</li>
-                        <li>尻尾の根元の動きについて</li>
-                    </ol>
-
-                <li><h2>きららの右側の尻尾について</h2></li>
-                    <ol>
-                        <li>きららの右側の尻尾の先の動きについて</li>
-                        <li>尻尾の根元の動きについて</li>
-                    </ol>
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="overview.html">会社概要</a></li>
+                <li><a href="feature.html">狛荷屋の特徴</a></li>
+                <li><a href="price.html">料金表</a></li>
+                <li><a href="inquiry.html">お問い合わせ</a></li>
             </ul>
-
+        </nav>
     </header>
-
-    <main>
-            <table>
-                
-                <tr>
-                    <th>きららの尻尾の動作</th>
-                </tr>
-                <tr>
-                    <th></th>
-                    <th>喜</th>
-                    <th>怒</th>
-                    <th>哀</th>
-                    <th>楽</th>
-                </tr>
-                <tr>
-                    <td>右の尻尾</td>
-                    <td>左に丸まる</td>
-                    <td>立つ</td>
-                    <td>下に丸まる</td>
-                    <td>左右に揺れる</td>
-                </tr>
-                <tr>
-                    <td>左の尻尾</td>
-                    <td>右に丸まる</td>
-                    <td>立つ</td>
-                    <td>下に丸まる</td>
-                    <td>左右に揺れる</td>
-                </tr>
-
-            </table>
-
-        <p>
-            きららが嘘をついているときの尻尾の動作の記述方法：
-            <br>左右の尻尾が交互にうねうねと後ろをかくように動く
-        </p>
-
-        <div>
-            一休みにゃーん
+    <!--ヘッダーここまで-->
+    <!--ヒーローここから-->
+    <h1 class="hero index">
+        運送会社　狛荷屋<br>
+        あなたの思いを迅速丁寧にお届けするよ！
+    </h1>
+    <!--ヒーローここまで-->
+    <!--メインここから-->
+    <main class="index">
+        <h2>更新情報</h2>
+        <div class="log" style="width: 100%; height: 300px; overflow: scroll;">
+            <!-- スクロールウィンドウの内容 -->
+            <div>
+            <h3>2023/7/5</h3>
+                <p>お弁当の配達を始めました！</p>
+                <p>料理担当：綺良々</p>
+                <img src="img/kirara.jpg" alt="綺良々">
+                <br>
+                <p>メニュー：活力にゃんこ飯</p>
+                <img src="img/lanch.jpg" alt="料理">
+                <br>
+                <p>今後、続々追加予定！！</p>
+                <hr>
+            </div>
+            <div>
+            <h3>2023/7/4</h3>
+            <p>ホームページ開設</p>
+            </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-        <a href=#top>一番上に戻る</a>
-
-
+        <h2>ご挨拶</h2>
+        <p>
+        安心と信頼の狛荷屋へようこそ！<br>
+        お客様の大切な荷物を迅速かつ確実にお届けすることを使命としています。<br>
+        私たちのチームは、豊富な経験と専門知識を持つプロフェッショナルで構成されており、<br>
+        お客様のニーズに合わせた最適な運送ソリューションを提供します。<br>
+        狛荷屋は常にお客様の満足度を追求し、笑顔と質の高いサービスをお届けします。<br>
+        どんなご要望にも真摯にお応えし、お客様のご期待に添えるよう努めます。<br>
+        心からのおもてなしと共に、狛荷屋でのご利用を心よりお待ちしております。<br>
+        </p>
     </main>
-
-
-
-
-
-
+    <!--メインここまで-->
+    <!--フッターここから-->
+    <footer class="footer">
+        <div class="top">
+            <a><img class="returnTop" src="img/footpaint.png" alt="ページトップへ戻る"></a>
+        </div>
+        <P class="copyright">&copy;狛荷屋</P>
+    </footer>
+    <!--フッターここまで-->
+    <!--jsファイル読み込み-->
+    <script src="js/komaniya.js"></script>
 </body>
 </html>
