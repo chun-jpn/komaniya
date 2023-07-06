@@ -56,3 +56,26 @@ function position(){
     }
 }
 intervalId = setInterval(bgi , 2000);
+
+
+//スライドショー
+let currentIndex = 0;
+const images = document.querySelectorAll('.section__image-container.slideshow .slide');
+
+// 最初の画像に'slideIn'クラスを追加
+images[currentIndex].classList.add('slideIn');
+
+setInterval(() => {
+    // 現在の画像から'slideIn'クラスを削除し、'slideOut'クラスを追加
+    images[currentIndex].classList.remove('slideIn');
+    images[currentIndex].classList.add('slideOut');
+
+    // 次のインデックス
+    currentIndex = (currentIndex + 1) % images.length;
+    
+
+    // 新しい画像に'slideIn'クラスを追加
+    images[currentIndex].classList.remove('slideOut');
+    images[currentIndex].classList.add('slideIn');
+}, 4000);
+
