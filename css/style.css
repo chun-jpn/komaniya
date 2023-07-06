@@ -82,6 +82,7 @@ body{
     .hero.price{
         background-image: url(../img/teyvat.webp) ;
         background-size: contain ;
+        background-position: center;
         background-repeat: no-repeat;
         position: relative ;
         padding: 400px 0 ;
@@ -186,6 +187,11 @@ main h2 {
     color: #ffffff;
     font-size: 24px;
     font-weight: bold;
+}
+
+.load{
+    text-align: center;
+    display: none;
 }
 
 /*inquiry.htmlに適用*/
