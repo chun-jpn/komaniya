@@ -62,22 +62,25 @@ intervalId = setInterval(bgi , 2000);
 let currentIndex = 0;
 const images = document.querySelectorAll('.section__image-container.slideshow .slide');
 
+//imagesを取得できる場合に限り実行
+if (images.length > 0) {
 // 最初の画像に'slideIn'クラスを追加
 images[currentIndex].classList.add('slideIn');
 
-setInterval(() => {
-    // 現在の画像から'slideIn'クラスを削除し、'slideOut'クラスを追加
-    images[currentIndex].classList.remove('slideIn');
-    images[currentIndex].classList.add('slideOut');
+    setInterval(() => {
+        // 現在の画像から'slideIn'クラスを削除し、'slideOut'クラスを追加
+        images[currentIndex].classList.remove('slideIn');
+        images[currentIndex].classList.add('slideOut');
 
-    // 次のインデックス
-    currentIndex = (currentIndex + 1) % images.length;
-    
+        // 次のインデックス
+        currentIndex = (currentIndex + 1) % images.length;
+        
 
-    // 新しい画像に'slideIn'クラスを追加
-    images[currentIndex].classList.remove('slideOut');
-    images[currentIndex].classList.add('slideIn');
-}, 4000);
+        // 新しい画像に'slideIn'クラスを追加
+        images[currentIndex].classList.remove('slideOut');
+        images[currentIndex].classList.add('slideIn');
+    }, 4000);
+}
 
 
 
