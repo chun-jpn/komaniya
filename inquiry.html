@@ -24,9 +24,28 @@
     <!--ヒーローここから-->
     <!--ヒーローここまで-->
     <!--メインここから-->
-    <main class="inquiry">
-        <h2>お問い合わせ</h2>
-
+    <main class="inquiry">        
+        <h2>高評価、よろしくお願いします！</h2>
+        <div class="evaluation">
+            <div>
+                高評価<img class="good" src="img/good.jpeg" alt="good">
+            </div>
+            <div>
+                低評価<img class="bad" src="img/bad.jpeg" alt="bad">
+            </div>
+        </div>
+        <p>
+            <label for="subject">お問い合わせの件名</label><br>
+            <input type="text" name="subject" placeholder="タイトル" id="subject">
+        </p>
+        <p>
+            <label for="message">お問い合わせの具体的な内容</label>
+            <br>
+            <textarea name="massage" placeholder="あなたの声を聞かせてください" id="message"></textarea>
+        </p>
+        <p class="submit">
+            <input type="submit" value="送信">
+        </p>
 
     </main>
     <!--メインここまで-->
