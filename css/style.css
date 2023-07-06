@@ -57,6 +57,15 @@ body{
     animation: fadeIn 2s ease-in-out ;
 }
 
+/*price.htmlのヒーローに適用*/
+    .hero.price{
+        background-image: url(../img/teyvat.webp) ;
+        background-size: contain ;
+        background-repeat: no-repeat;
+        position: relative ;
+        padding: 400px 0 ;
+    }
+
 /*メインに適用*/
 main{
     margin: 90px auto 90px auto ;
@@ -96,22 +105,8 @@ main h2 {
     letter-spacing: 10px;
 }
 
-
-
-/*　モバイル対応　*/
-@media(max-width: 767px ){
-    .nav ul{
-        flex-wrap: wrap ;
-        gap: 20px ;
-    }
-    main{
-        padding: 0 4%;
-    }
-}
-
 /* 個別スタイル */
 /* index.html */
-
 .index main{
     padding: 0 0 0 20px;
     line-height: 1.7;
@@ -129,4 +124,93 @@ main h2 {
     width: 112px ;
     text-align: left ;
     vertical-align: top ;
+}
+
+/* price.html */
+.delivery{
+    text-align: center;
+}
+.hero.price .inaduma {
+    position: absolute;
+    top: 80%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+}
+.hero.price .ri-yue {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+}
+.hero.price .mondo {
+    position: absolute;
+    top: 15%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+}
+.hero.price .sume-ru {
+    position: absolute;
+    top: 45%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/*inquiry.htmlに適用*/
+.evaluation{
+    display: grid ;
+    grid-template-columns: 1fr 1fr ;
+    gap: 20px ;
+    text-align: center;
+    padding: 100px 0;
+}  
+.good{
+    height: 100px;
+    width: 100px;
+}
+.bad{
+    height: 100px;
+    width: 100px;
+}
+
+input[type="text"],textarea{
+    padding: 6px ;
+    width: 100% ;
+    font-size: 1rem ;
+}
+textarea{
+    height: 140px ;
+}
+.submit{
+    text-align: center ;    
+}
+.submit input[type="submit"]{
+    border: none ;
+    padding: 20px ;
+    width: 200px ;
+    background-color: #253958 ;
+    color: #ffffff ;
+    font-size: 1rem ;
+}
+
+/*　モバイル対応　*/
+@media(max-width: 767px ){
+    .nav ul{
+        flex-wrap: wrap ;
+        gap: 20px ;
+    }
+    main{
+        padding: 0 4%;
+    }
 }
