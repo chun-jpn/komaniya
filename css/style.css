@@ -265,7 +265,7 @@ textarea{
 .section__image-container {
     flex: 1;
     margin-top: 20px;
-    margin-right: 50px;
+    margin-right: 25px;
     max-width: 100%;
     min-width: 300px;
     object-fit: cover;
@@ -302,8 +302,8 @@ textarea{
 
 /* 背景画像を全体に適用する部分 */
 .main__background {
-    background-image: url('../img/ichimatsu_green.png');
-    background-repeat: repeat;
+    background-image: url('../img/緑背景.jpg');
+    background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
