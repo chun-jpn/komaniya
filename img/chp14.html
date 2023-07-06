@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chapter.14</title>
+</head>
+<body>
+    <!--p286 イベント
+        要素.addEventListener(イベント名,関数名)-->
+    <input type="submit" class="reload" value="更新">
+    <br>
+    <input type="submit" class="alert" value="アラート">
+    <br>
+    <button type="button" class="push">ボタン</button>
+    <br>
+    <input type="text" class="input">
+    <br>
+    <input type="radio" name="radio" value="1" class="radio">1
+    <input type="radio" name="radio" value="2" class="radio">2
+    <input type="checkbox" name="checkbox[]" value="1" class="checkbox">1
+    <input type="checkbox" name="checkbox[]" value="2" class="checkbox">2
+    <br>
+    <select class="select">
+        <option value=""></option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+    </select>
+    <div class="mouse" style="width: 200px; height: 100px;background: pink;"></div>
+    <div class="scroll"></div>
+
+    <script>
+        function load(){
+            location.reload();
+        } 
+        const reloadPage = document.querySelector('.reload')
+        reloadPage.addEventListener('click',load);
+        
+        //アラートをクリックしたらアラートを出す
+        function alertMessage(){ //関数定義
+            alert('ボタンをクリックしました');
+        }
+        //class属性、alertを検索
+        const note = document.querySelector('.alert');
+        //class=alertがクリックされたら関数を実行する(アラートを出す)
+        note.addEventListener('click',alertMessage);
+        
+
+        //ex-training ボタンを押したら、数字をカウントアップする
+        //ボタン「.push」を検索
+        const button = document.querySelector('.push');
+        //入れ物を作成
+        const countup = document.createElement('p');
+        let base = 1 //ベースの数値を作成
+        //イベント発生時、ベース数値+1
+        function event(){
+            countup.textContent = base++;
+        }
+        //buttonをクリックしたら、イベント発生
+        button.addEventListener('click',event);
+        button.after(countup) //ボタンの後ろに出力
+        countup.classList.add('countup');
+
+        //関数を直接入力することもできる
+        button.addEventListener('click',function(){
+            console.log('クリックしました');
+        });
+        
+        //inputイベント
+        const input = document.querySelector('.input');
+        input.addEventListener('input' , function(event2){
+            const value = event2.currentTarget.value ;
+            console.log(`入力内容: ${value}`);
+        });
+        //radioボタンに対してもinputイベントは有効
+        const radios = document.querySelectorAll('.radio') ;
+        //class属性「radio」を全て検索
+        //ラジオボタン「1」「2」が呼び出される
+        for (let radio of radios){ //for ofで繰り返す
+            //radioのイベントが発生するたびに
+            radio.addEventListener('input' , function(event3){
+                //イベントが発生した要素の値を取得
+                const value3 = event3.currentTarget.value ;
+                console.log(`${value3}がチェックされました`);
+            });
+        }
+
+        //チェックボックスの場合
+        const checkboxes = document.querySelectorAll('.checkbox');
+        for (let checkbox of checkboxes){
+            checkbox.addEventListener('input',function(event4){
+            const value4 = event4.currentTarget.value ;
+            console.log(`${value4}がチェックされました`)   
+            })
+        }
+
+        //セレクトボックスの場合
+        const select = document.querySelector('.select')
+        select.addEventListener('input',function(event5){
+            const value5 = event5.currentTarget.value ;
+            console.log(`${value5}が選択されました`)
+        })
+
+        //p299 keydoun/keyupイベント
+        //キーを押すとイベント発生
+        const input2 = document.querySelector('body')
+        input2.addEventListener('keydown',function(event6){
+            console.log(event6.key)
+        })
+
+        //p300 mousemove/mousedown/mouseup　イベント
+        //htmlにて<div class="mouse" style="width: 200px; height: 100px;background: pink;"></div>とすることで領域を指定
+        const mouse = document.querySelector('.mouse') //class="mouse"を検索する = 200px * 100pxの領域を検索
+        mouse.addEventListener('mousemove',function(event7){ //マウスを動かしたときにイベント発生
+            console.log(`Move : x =${event7.offsetX},y = ${event7.offsetY}`)
+        })
+        //領域の左上を座標0,0としてマウスの位置を出力
+        mouse.addEventListener('mousedown',function(event7){ //マウスボタン押したとき
+            console.log(`Down : x =${event7.offsetX},y = ${event7.offsetY}`)
+        })
+        mouse.addEventListener('mouseup',function(event7){ //マウスボタン離したとき
+            console.log(`Up : x =${event7.offsetX},y = ${event7.offsetY}`)
+        })
+        mouse.addEventListener('mouseover',function(event7){ //マウスが乗ったとき
+            console.log(`on : x =${event7.offsetX},y = ${event7.offsetY}`)
+        })
+
+        //p301  スクロールイベント
+        const scrollContent = document.querySelector('.scroll')
+        for(let i = 0 ; i < 1000 ; i++){ 
+            scrollContent.textContent += `テキスト ${i}`;}
+        //スクロール用にテキストいっぱい出してるだけ
+        window.addEventListener('scroll' , function(){
+            console.log(`スクロール量は${window.scrollY}pxです`)
+        });
+        
+        //p303 イベントオブジェクト
+        button.addEventListener('click', function(event8){
+            const button = event8.currentTarget;
+            button.textContent = "変更します"
+        })
+
+        </script>
+        
+
+
+
+</body>
+</html>
