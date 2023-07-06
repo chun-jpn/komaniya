@@ -56,3 +56,111 @@ function position(){
     }
 }
 intervalId = setInterval(bgi , 2000);
+
+//price.htmlに適用
+    // ボタン要素を取得
+    const inadumaButton = document.querySelector('.inaduma input[type="submit"]');
+    const riYueButton = document.querySelector('.ri-yue input[type="submit"]');
+    const mondoButton = document.querySelector('.mondo input[type="submit"]');
+    const sumeRuButton = document.querySelector('.sume-ru input[type="submit"]');
+
+    // ラジオボタン要素を取得
+    const inadumaRadio = document.querySelector('input[name="area"][value="0"]');
+    const riYueRadio = document.querySelector('input[name="area"][value="1"]');
+    const mondoRadio = document.querySelector('input[name="area"][value="2"]');
+    const sumeRuRadio = document.querySelector('input[name="area"][value="3"]');
+
+    //ラジオボタンのチェック状況に合わせてbackground-imageを変更
+    const bgiprice = document.querySelector('.hero.price')
+    const reload = document.querySelector('.load')
+    inadumaRadio.addEventListener('change', function() {
+        if (inadumaRadio.checked) {
+            bgiprice.style.backgroundImage = 'url(img/inaduma.png)';
+            inadumaButton.style.display = 'none'
+            riYueButton.style.display = 'none'
+            mondoButton.style.display = 'none'
+            sumeRuButton.style.display = 'none'
+            reload.style.display ="block"
+        }
+    });
+
+    riYueRadio.addEventListener('change', function() {
+        if (riYueRadio.checked) {
+            bgiprice.style.backgroundImage = 'url(img/ri-yue.png)';
+            inadumaButton.style.display = 'none'
+            riYueButton.style.display = 'none'
+            mondoButton.style.display = 'none'
+            sumeRuButton.style.display = 'none'
+            reload.style.display ="block"
+        }
+    });
+
+    mondoRadio.addEventListener('change', function() {
+        if (mondoRadio.checked) {
+            bgiprice.style.backgroundImage = 'url(img/mondo.png)';
+            inadumaButton.style.display = 'none'
+            riYueButton.style.display = 'none'
+            mondoButton.style.display = 'none'
+            sumeRuButton.style.display = 'none'
+            reload.style.display ="block"
+        }
+    });
+
+    sumeRuRadio.addEventListener('change', function() {
+        if (sumeRuRadio.checked) {
+            bgiprice.style.backgroundImage = 'url(img/sume-ru.png)';
+            inadumaButton.style.display = 'none'
+            riYueButton.style.display = 'none'
+            mondoButton.style.display = 'none'
+            sumeRuButton.style.display = 'none'
+            reload.style.display ="block"
+        }
+    });
+
+    // ボタンのクリックイベントを設定
+    inadumaButton.addEventListener('click', function() {
+        inadumaRadio.checked = true;
+        bgiprice.style.backgroundImage = 'url(img/inaduma.png)'
+        inadumaButton.style.display = 'none'
+        riYueButton.style.display = 'none'
+        mondoButton.style.display = 'none'
+        sumeRuButton.style.display = 'none'
+        reload.style.display ="block"
+    });
+
+    riYueButton.addEventListener('click', function() {
+        riYueRadio.checked = true;
+        bgiprice.style.backgroundImage = 'url(img/ri-yue.png)';
+        inadumaButton.style.display = 'none'
+        riYueButton.style.display = 'none'
+        mondoButton.style.display = 'none'
+        sumeRuButton.style.display = 'none'
+        reload.style.display ="block"
+    });
+
+    mondoButton.addEventListener('click', function() {
+        mondoRadio.checked = true;
+        bgiprice.style.backgroundImage = 'url(img/mondo.png)';
+        inadumaButton.style.display = 'none'
+        riYueButton.style.display = 'none'
+        mondoButton.style.display = 'none'
+        sumeRuButton.style.display = 'none'
+        reload.style.display ="block"
+    });
+
+    sumeRuButton.addEventListener('click', function() {
+        sumeRuRadio.checked = true;
+        bgiprice.style.backgroundImage = 'url(img/sume-ru.png)';
+        inadumaButton.style.display = 'none'
+        riYueButton.style.display = 'none'
+        mondoButton.style.display = 'none'
+        sumeRuButton.style.display = 'none'
+        reload.style.display ="block"
+    });
+    
+    //元に戻るボタンの作成
+    const load = document.querySelector('.load')
+    load.addEventListener('click' , function(){
+        location.reload()
+    })
+
