@@ -22,12 +22,55 @@
     </header>
     <!--ヘッダーここまで-->
     <!--ヒーローここから-->
+    <h2 class="delivery">配達地域を選んでください</h2>
+    <div class="hero price">
+        <div class="inaduma"><input type="submit" value="稲妻"></div>
+        <div class="ri-yue"><input type="submit" value="璃月"></div>
+        <div class="mondo"><input type="submit" value="モンド"></div>
+        <div class="sume-ru"><input type="submit" value="スメール"></div>
+    </div>
+
+
+        <!--
+        <div class="map">
+            <img src="img/inaduma.png" alt="稲妻">
+        </div>
+        <div class="map">
+            <img src="img/ri-yue.png" alt="璃月">
+        </div>
+        <div>
+            <img src="img/mondo.png" alt="モンド">
+        </div>
+        <div>
+            <img src="img/sume-ru.png" alt="スメール">
+        </div>
+        -->
+        
     <!--ヒーローここまで-->
     <!--メインここから-->
     <main class="price">
         <h2>料金表</h2>
+        <h3>発送地域を選んでください</h3>
+            <p class="area">
+                <label><input type="radio" name="area" value="0">稲妻</label>
+                <label><input type="radio" name="area" value="1">璃月</label>
+                <label><input type="radio" name="area" value="2">モンド</label>
+                <label><input type="radio" name="area" value="3">スメール</label>
+            </p>
 
+            <p class="weight">
+                <label><input type="radio" name="weight" value="0">2kg未満</label><br>
+                <label><input type="radio" name="weight" value="1">2kg以上、5kg未満</label><br>
+                <label><input type="radio" name="weight" value="2">5kg以上、10kg未満</label><br>
+                <label><input type="radio" name="weight" value="3">10kg以上</label><br>
+            </p>
 
+        <h3>お弁当</h3>
+        <div class="bento">
+            <label><input type="checkbox" name="bento" value="catRice">活力にゃんこ飯</label>
+        </div>
+        <p>お弁当の発注数</p>
+        <input type="number" name="num" placeholder="発注数を入力してください">個
     </main>
     <!--メインここまで-->
     <!--フッターここから-->
