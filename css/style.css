@@ -130,7 +130,7 @@ main h2 {
 }
 
 /* price.html */
-.delivery{
+.section{
     text-align: center;
 }
 .hero.price .inaduma {
@@ -207,6 +207,11 @@ textarea{
     font-size: 1rem ;
 }
 
+
+
+
+
+
 /*　モバイル対応　*/
 @media(max-width: 767px ){
     .nav ul{
@@ -215,5 +220,81 @@ textarea{
     }
     main{
         padding: 0 4%;
+    }
+}
+
+
+
+
+
+
+/* コンテナのスタイリング */
+.section__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
+}
+
+/* 画像のスタイリング */
+.section__image-container {
+    flex: 1;
+    margin-right: 50px;
+}
+
+.section__image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 説明文のスタイリング */
+.section__description-container {
+    flex: 2;
+}
+
+.section__description-container h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.section__description-container p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+/* 背景画像を全体に適用する部分 */
+.main__background {
+    background-image: url('../img/ichimatsu_green.png');
+    background-repeat: repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+  }
+  
+  /* 中央の帯を設定する部分 */
+  .main__container {
+    position: relative;
+    max-width: 80%;  
+    margin: 0 auto;  
+    padding: 20px;   
+    background-color: rgba(255,255,255,0.5); /* 半透明の白を背景色に設定 */
+  }
+  
+  
+
+
+
+/* 画面サイズによるレスポンシブ対応 */
+@media screen and (max-width: 767px){
+    .section__container {
+        flex-direction: column;
+    }
+
+    .section__image-container {
+        margin-right: 0;
+        margin-bottom: 50px;
     }
 }
