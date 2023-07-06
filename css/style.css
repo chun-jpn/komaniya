@@ -71,7 +71,12 @@ body{
 }
 
 /*overview.htmlのヒーローに適用*/
-
+.hero.overview{ 
+    padding: 200px 60px;
+    background-size: contain ;
+    background-position: left;
+    background-repeat: no-repeat ;
+}
 
 /*price.htmlのヒーローに適用*/
     .hero.price{
