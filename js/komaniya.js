@@ -62,7 +62,7 @@ intervalId = setInterval(bgi , 2000);
 let currentIndex = 0;
 const images = document.querySelectorAll('.section__image-container.slideshow .slide');
 
-//imagesを取得できる場合に限り実行
+//imagesを取得できる場合に限り実行 この処理を追加しないとcurrentIndex null でエラーになり、ここより下の行に影響がある
 if (images.length > 0) {
 // 最初の画像に'slideIn'クラスを追加
 images[currentIndex].classList.add('slideIn');
@@ -76,8 +76,8 @@ images[currentIndex].classList.add('slideIn');
         currentIndex = (currentIndex + 1) % images.length;
         
 
-        // 新しい画像に'slideIn'クラスを追加
-        images[currentIndex].classList.remove('slideOut');
+        // 新しい画像について'slideOut'クラス削除、'slideIn'クラスを追加
+        images[currentIndex].classList.remove('slideOut'); /*ここでslideOutを消さないと動作が変になる*/
         images[currentIndex].classList.add('slideIn');
     }, 4000);
 }
