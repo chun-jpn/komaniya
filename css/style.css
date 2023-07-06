@@ -57,6 +57,9 @@ body{
     animation: fadeIn 2s ease-in-out ;
 }
 
+/*overview.htmlのヒーローに適用*/
+
+
 /*price.htmlのヒーローに適用*/
     .hero.price{
         background-image: url(../img/teyvat.webp) ;
