@@ -193,3 +193,82 @@ images[currentIndex].classList.add('slideIn');
         location.reload()
     })
 
+    //料金の計算式
+    let price = 0;
+
+    function calculatePrice() {
+      // 選択された地域と重量の値を取得
+      const selectedArea = document.querySelector('input[name="area"]:checked').value;
+      const selectedWeight = document.querySelector('input[name="weight"]:checked').value;
+
+      if (selectedArea === "0") {
+        if (selectedWeight === "0") {
+          price = 1000;
+        } else if (selectedWeight === "1") {
+          price = 1500;
+        } else if (selectedWeight === "2") {
+          price = 2000;
+        } else if (selectedWeight === "3") {
+          price = '重くて運べないにゃ……';
+        }
+      } else if (selectedArea === "1") {
+        if (selectedWeight === "0") {
+          price = 2000;
+        } else if (selectedWeight === "1") {
+          price = 3000;
+        } else if (selectedWeight === "2") {
+          price = 4000;
+        } else if (selectedWeight === "3") {
+          price = '重くて運べないにゃ……';
+        }
+      } else if (selectedArea === "2") {
+        if (selectedWeight === "0") {
+          price = 2500;
+        } else if (selectedWeight === "1") {
+          price = 3500;
+        } else if (selectedWeight === "2") {
+          price = 6000;
+        } else if (selectedWeight === "3") {
+          price = '重くて運べないにゃ……';
+        }
+      } else if (selectedArea === "3") {
+        if (selectedWeight === "0") {
+          price = 4000;
+        } else if (selectedWeight === "1") {
+          price = 6000;
+        } else if (selectedWeight === "2") {
+          price = 8000;
+        } else if (selectedWeight === "3") {
+          price = '重くて運べないにゃ……';
+        } 
+      }
+    }
+
+    //弁当代金の計算
+    let bentoPrice = 0
+    const bento = document.querySelector('.bento')
+    const quantity = document.querySelector('.quantity')
+
+    // 結果を表示
+    const curryResult = document.createElement('p');
+    const bentoResult = document.createElement('p');
+    const estimate = document.querySelector('.estimate');
+    estimate.addEventListener('click', function() {
+        const selectedWeight = document.querySelector('input[name="weight"]:checked').value; 
+        calculatePrice();
+        if(selectedWeight === "3"){
+            curryResult.textContent = price;
+        }else {
+            curryResult.textContent = `配送料: ${price} モラ`;
+        }
+        if(document.querySelector('input[name="bento"]:checked')){
+            bentoPrice = 500 * quantity.value;
+            bentoResult.textContent = `弁当料: ${bentoPrice} モラ`;
+        } else {
+            bentoPrice = 0;
+            bentoResult.textContent = '';
+        }
+    });
+    estimate.parentNode.appendChild(curryResult);
+    estimate.parentNode.appendChild(bentoResult);
+    
